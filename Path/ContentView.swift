@@ -18,10 +18,10 @@ struct ContentView: View {
                 Spacer()
                 
                 LazyVGrid(columns: [GridItem(.fixed(20))], spacing: 0, content: {
-                    ForEach(1..<10, id: \.self) { columnIndex in
+                    ForEach(1...9, id: \.self) { columnIndex in
                         
                             LazyHGrid(rows: [GridItem(.fixed(20))], spacing: 0, content: {
-                                ForEach(1..<10, id: \.self) { rowIndex in
+                                ForEach(1...9, id: \.self) { rowIndex in
                                     
                                     Path { path in
                                         path.addRect(rectangle)
