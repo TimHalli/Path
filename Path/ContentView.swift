@@ -16,11 +16,10 @@ struct ContentView: View {
             
             ScrollView {
                 Spacer()
+                
                 LazyVGrid(columns: [GridItem(.fixed(20))], spacing: 0, content: {
-                    
                     ForEach(1..<10, id: \.self) { columnIndex in
                         
-                        HStack(spacing: 0) {
                             LazyHGrid(rows: [GridItem(.fixed(20))], spacing: 0, content: {
                                 ForEach(1..<10, id: \.self) { rowIndex in
                                     
@@ -37,7 +36,6 @@ struct ContentView: View {
                                     )
                                 }
                             })
-                        }
                     }
                 })
             }
